@@ -12,11 +12,18 @@ export default function Banner() {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    const cellSize = 10;
+    // Ajustar dimensiones
+    canvas.width = window.innerWidth;
+    canvas.height = 300; // Altura fija de 300px
+
+    // Calcular tamaño de células para que queden proporcionadas
+    const cellSize = Math.floor(canvas.width / 100); // Aproximadamente 100 células de ancho
     const cols = Math.floor(canvas.width / cellSize);
     const rows = Math.floor(canvas.height / cellSize);
+
+    // Inicializar grid con menos células vivas
     let grid = Array(cols).fill(null).map(() => 
-      Array(rows).fill(null).map(() => Math.random() > 0.7)
+      Array(rows).fill(null).map(() => Math.random() > 0.85)
     );
 
     const computeNextGeneration = () => {
@@ -44,26 +51,46 @@ export default function Banner() {
       return nextGen;
     };
 
-    const animate = () => {
-      ctx.fillStyle = 'rgba(0,0,0,0.1)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    let lastUpdate = 0;
+    const FRAME_DELAY = 200; // Actualizar cada 200ms (5 veces por segundo)
 
-      grid.forEach((col, x) => {
-        col.forEach((cell, y) => {
-          if (cell) {
-            ctx.fillStyle = '#00ff00';
-            ctx.fillRect(x * cellSize, y * cellSize, cellSize-1, cellSize-1);
-          }
+    const animate = (timestamp: number) => {
+      if (timestamp - lastUpdate > FRAME_DELAY) {
+        // Limpiar con más opacidad para dejar rastro más duradero
+        ctx.fillStyle = 'rgba(0,0,0,0.2)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        grid.forEach((col, x) => {
+          col.forEach((cell, y) => {
+            if (cell) {
+              // Color más sutil
+              ctx.fillStyle = 'rgba(0,255,0,0.5)';
+              ctx.fillRect(
+                x * cellSize, 
+                y * cellSize, 
+                cellSize - 1, 
+                cellSize - 1
+              );
+            }
+          });
         });
-      });
 
-      grid = computeNextGeneration();
+        grid = computeNextGeneration();
+        lastUpdate = timestamp;
+      }
       requestAnimationFrame(animate);
     };
 
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
-    animate();
+    animate(0);
+
+    // Manejar redimensionamiento
+    const handleResize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = 300;
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return <canvas ref={canvasRef} className={styles.banner} />;
