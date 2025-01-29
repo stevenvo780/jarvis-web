@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://jarvis-ai.dev'),
+  metadataBase: new URL('https://jarvis-web-seven.vercel.app'),
   title: {
     template: '%s | Jarvis AI - Open Source AI Assistant',
     default: 'Jarvis AI - The Most Advanced Open Source AI Assistant for Linux'
@@ -25,14 +25,16 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Jarvis AI - Open Source AI Assistant",
     description: "An open source AI assistant powered by multiple LLMs",
-    url: "https://github.com/stevenvo780/jarvisIAV2",
-    type: "website"
+    url: "https://jarvis-web-seven.vercel.app",
+    type: "website",
+    siteName: "Jarvis AI",
   },
   twitter: {
     card: "summary_large_image",
     title: "Jarvis AI - Open Source AI Assistant",
-    description: "An open source AI assistant powered by multiple LLMs"
-  }
+    description: "An open source AI assistant powered by multiple LLMs",
+    site: "@stevenvallejo",
+  },
 };
 
 export default function RootLayout({

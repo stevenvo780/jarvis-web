@@ -5,8 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: '/private/',
     },
-    sitemap: 'https://jarvis-ai.dev/sitemap.xml',
+    sitemap: 'https://jarvis-web-seven.vercel.app/sitemap.xml',
   }
 }
