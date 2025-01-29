@@ -169,10 +169,66 @@ a.secondary {
   color: #00ff00;
 }
 
+.architecture li p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-left: 1.5rem;
+  margin-top: 0.25rem;
+}
+
 .collaborate {
   font-style: italic;
   opacity: 0.8;
   margin-top: 1rem;
+}
+
+.vision {
+  text-align: center;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(145deg, var(--gray-alpha-100), transparent);
+  border-radius: 8px;
+}
+
+.vision h2 {
+  color: #00ff00;
+  margin-bottom: 1rem;
+}
+
+.vision p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.getInvolved {
+  background: var(--gray-alpha-100);
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.getInvolved h2 {
+  text-align: center;
+  color: #00ff00;
+  margin-bottom: 2rem;
+}
+
+.contributionGuide {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+
+.contributionGuide h3 {
+  margin-bottom: 0.5rem;
+  color: var(--foreground);
+}
+
+.contributionGuide p {
+  font-size: 0.9rem;
+  opacity: 0.8;
 }
 
 /* Enable hover only on non-touch devices */
@@ -225,6 +281,11 @@ a.secondary {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+  }
+
+  .contributionGuide {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
 
