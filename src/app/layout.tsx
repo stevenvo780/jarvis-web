@@ -5,15 +5,21 @@ import "./globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: 'swap',
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: "Jarvis AI - Open Source AI Assistant",
+  metadataBase: new URL('https://jarvis-ai.dev'),
+  title: {
+    template: '%s | Jarvis AI - Open Source AI Assistant',
+    default: 'Jarvis AI - The Most Advanced Open Source AI Assistant for Linux'
+  },
   description: "An open source AI assistant powered by LLaMA, Google Gemini 2.0, GPT4 and Whisper, capable of executing Ubuntu commands, managing multimedia, and Google Calendar integration.",
   keywords: "AI Assistant, Open Source, LLaMA, Google Gemini, GPT4, Whisper, Ubuntu, Voice Commands",
   openGraph: {
