@@ -16,20 +16,23 @@ export default function HomeClient() {
         <section className={styles.features}>
           <h2>Core Capabilities</h2>
           <ul>
-            <li>🧠 Advanced AI Architecture
-              <p>Orchestrates LLaMA, Google Gemini 2.0, GPT4, and Whisper for optimal performance in each task</p>
+            <li>🧠 Multi-Model Intelligence
+              <p>Integrates OpenAI GPT, Google Gemini 2.0, Local LLama, and DeepSeek-R1 models for comprehensive AI capabilities</p>
             </li>
-            <li>🤖 Multi-Agent System
-              <p>Agents collaborate to solve complex tasks using chain-of-thought and advanced reasoning</p>
+            <li>🗣️ Advanced Voice Interaction
+              <p>Natural voice commands, TTS responses, and wake word activation with &quot;Jarvis&quot;</p>
             </li>
-            <li>🎯 System Integration
-              <p>Deep Linux integration with voice commands, system control, and process management</p>
+            <li>📅 Smart Calendar Integration
+              <p>Seamless Google Calendar sync with natural language event creation and intelligent scheduling</p>
             </li>
-            <li>🗣️ Natural Interaction
-              <p>Human-like conversations with context awareness and memory retention</p>
+            <li>🔧 System Control
+              <p>Manages applications, resources, and system functions through voice or text commands</p>
             </li>
-            <li>🔄 Smart Automation
-              <p>Calendar management, email handling, and workflow automation</p>
+            <li>🧮 Advanced Mathematics
+              <p>Complex calculations, WolframAlpha integration, and support for advanced mathematical operations</p>
+            </li>
+            <li>💡 Intelligent Features
+              <p>Context awareness, conversation history, user adaptation, and multi-cultural understanding</p>
             </li>
           </ul>
         </section>
@@ -40,22 +43,22 @@ export default function HomeClient() {
         </section>
 
         <section className={styles.architecture}>
-          <h2>Why Contribute?</h2>
+          <h2>Technical Excellence</h2>
           <ul>
-            <li>🌟 Shape the Future of AI
-              <p>Work with cutting-edge AI models and architectures</p>
+            <li>⚡ Terminal Interface
+              <p>Color-coded outputs, real-time feedback, and intuitive command system</p>
             </li>
-            <li>💡 Innovation Freedom
-              <p>Experiment with new ideas without corporate constraints</p>
+            <li>🔄 Resource Management
+              <p>Efficient memory handling and automatic model selection based on task complexity</p>
             </li>
-            <li>🤝 Active Community
-              <p>Join a growing community of AI enthusiasts and developers</p>
+            <li>🌐 API Integration
+              <p>Seamless connection with multiple AI services and external tools</p>
             </li>
-            <li>📚 Learning Opportunity
-              <p>Gain hands-on experience with modern AI technologies</p>
+            <li>🔊 Audio Processing
+              <p>Advanced sound effects and voice processing capabilities</p>
             </li>
-            <li>🛡️ Privacy-First
-              <p>Help build AI that respects user privacy and freedom</p>
+            <li>📊 Data Management
+              <p>Robust conversation history tracking and user profile adaptation</p>
             </li>
           </ul>
         </section>
