@@ -12,6 +12,12 @@
   justify-items: center;
   gap: 64px;
   font-family: var(--font-geist-sans);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* Eliminar cualquier overflow innecesario */
+  overflow-x: hidden;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,6 +36,13 @@
   flex-direction: column;
   gap: 32px;
   grid-row-start: 2;
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  /* Asegurar que no haya scroll horizontal */
+  overflow-x: hidden;
 }
 
 .main ol {
