@@ -12,10 +12,12 @@ export default function Banner() {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
+    // Aumentamos la altura a 800px
     canvas.width = window.innerWidth;
-    canvas.height = 300;
+    canvas.height = 800;
 
-    const cellSize = Math.floor(canvas.width / 100);
+    // Ajustamos el tamaño de las células para que haya más
+    const cellSize = Math.floor(canvas.width / 150);
     const cols = Math.floor(canvas.width / cellSize);
     const rows = Math.floor(canvas.height / cellSize);
 
@@ -80,7 +82,7 @@ export default function Banner() {
 
     const handleResize = () => {
       canvas.width = window.innerWidth;
-      canvas.height = 300;
+      canvas.height = 800; // Mantenemos la altura constante
     };
 
     window.addEventListener('resize', handleResize);
